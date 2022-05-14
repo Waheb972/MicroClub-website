@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(/contact/Circuit_Board.svg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+main::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.07),
+    rgba(0, 0, 0, 0.65)
+  );
+  pointer-events: none;
+}
+nav {
+  z-index: 2;
+  display: flex;
+  padding: 0.75rem 2rem;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-between;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-style: italic;
+  list-style: none;
+  color: white;
+}
+li {
+  margin: 0 1rem;
+  cursor: pointer;
+  position: relative;
+}
+li:after {
+  content: "";
+  background-color: #fff;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  position: absolute;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+li:hover::after,
+.active::after {
+  width: 100%;
+}
+.logo {
+  filter: brightness(0) invert(1);
+  width: 64px;
+  height: 64px;
+}
+.active {
+  font-weight: bolder;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/** CONTAINER***/
+.container {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+
+  z-index: 5;
+  height: 40rem;
+  margin: 1rem auto;
+
+  background: white;
+  box-shadow: 0 10px 20px -6px #000;
+}
+.sub-container {
+  background: #26234e;
+  width: 50%;
+  overflow: hidden;
+}
+.imgcontainer img {
+  width: 100%;
+
+  height: 30%;
+}
+.imgcontainer {
+  display: flex;
+  width: 50%;
+  background: #0098ff;
+  padding: 2rem;
+  gap: 2rem;
+  color: white;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.seccontainer {
+  display: flex;
+  text-align: left;
+
+  flex-direction: column;
+  gap: 2rem;
+}
+.seccontainer .para {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.15rem;
+}
+.contactfirst a {
+  color: blue;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.contactfirst {
+  font-style: italic;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.socials a {
+  width: 35px;
+}
+/*-----------FORM---------------------*/
+.formContainer {
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  color: white;
+  position: relative;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+form {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  top: 70%;
+  left: 00%;
+  flex-direction: column;
+  gap: 2.5rem;
+  transition: all 0.5s ease-out;
+}
+form input,
+form select {
+  padding: 1rem;
+  width: 80%;
+  color: white;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px #fff solid;
+  outline: none;
+}
+form select option {
+  background: black;
+}
+.btn-box {
+  width: 80%;
+  margin: 3rem auto;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.btn-box button {
+  font-size: 23px;
+  min-width: 170px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#form2,
+#form3 {
+  left: 100%;
+}
+/*-----STEPS-------*/
+.steps {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #0098ff;
+}
+.step {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  width: 33.3%;
+  padding: 1rem;
+
+  color: white;
+}
+.progress {
+  position: absolute;
+  width: 33.3%;
+  transition: all 0.8s ease-in-out;
+  height: 100%;
+  background: #ff40bf;
+}
+.progress::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 0;
+  border-bottom: 28px solid transparent;
+  border-top: 28px solid transparent;
+  top: -3%;
+  right: -20px;
+  border-left: 20px solid #ff40bf;
+}
