@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url(/contact/Circuit_Board.svg);
+  background: url(/images/Circuit_Board.svg);
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,13 +29,15 @@ main::before {
   );
   pointer-events: none;
 }
+main {
+  overflow: hidden;
+}
 nav {
   z-index: 2;
   display: flex;
   padding: 0.75rem 2rem;
   flex-direction: row;
   align-items: center;
-
   justify-content: space-between;
 }
 ul {
@@ -184,7 +186,7 @@ p {
   height: 35rem;
   grid-template-columns: 40% 60%;
   padding: 4rem;
-  margin: 7rem auto;
+  margin: 10rem auto;
   position: relative;
   border-radius: 10%;
   width: 80%;
@@ -247,7 +249,7 @@ button {
 .inputcont label {
   position: absolute;
   bottom: 0;
-  color: gray;
+
   pointer-events: none;
   left: 0;
   width: 80%;
@@ -299,7 +301,8 @@ form input:valid + .labelname .contentname {
   transform: translateY(-150%) scale(0.8);
   color: #0098ff;
 }
-form input:focus + label::after {
+form input:focus + label::after,
+form input:valid + label::after {
   transform: translateX(0);
 }
 

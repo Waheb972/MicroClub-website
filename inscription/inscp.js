@@ -8,6 +8,7 @@ for (let i = 0; i < Navelem.length; i++) {
     Navelem[i].className += " active";
   });
 }
+const exitsession = document.querySelector(".exitsession");
 
 const progress = document.querySelector(".progress");
 const next1 = document.querySelector(".next1");
@@ -18,12 +19,13 @@ const previous2 = document.querySelector(".previous2");
 const form1 = document.getElementById("form1");
 const form2 = document.getElementById("form2");
 const form3 = document.getElementById("form3");
-
+console.log("dibne");
 next1.addEventListener("click", (e) => {
   e.preventDefault();
 
   form1.style.left = "-100%";
-  form2.style.left = "0%";
+  form2.style.left = "00%";
+  form3.style.left = "100%";
   progress.style.width = "66.6%";
 });
 next2.addEventListener("click", (e) => {
@@ -48,9 +50,7 @@ previous2.addEventListener("click", (e) => {
   form2.style.left = "0%";
   progress.style.width = "66.6%";
 });
-
-const submit = () => {
-  form1.submit();
-  form2.submit();
-  form3.submit();
-};
+exitsession.addEventListener("click", (e) => {
+  console.log("ok");
+  document.querySelector(".SESSION").style.display = "none";
+});

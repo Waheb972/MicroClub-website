@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url(/contact/Circuit_Board.svg);
+  background-image: url(/images/Circuit_Board.svg);
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,6 +28,30 @@ main::before {
     rgba(0, 0, 0, 0.65)
   );
   pointer-events: none;
+}
+
+.SESSION {
+  background: rgb(52, 204, 52);
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  backdrop-filter: blur(100px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 100%;
+  max-height: 5rem;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+}
+.SESSION svg {
+  width: 32px;
+
+  filter: brightness(0) invert(1);
+}
+.exitsession {
+  cursor: pointer;
 }
 nav {
   z-index: 2;
@@ -80,7 +104,7 @@ a {
 }
 /** CONTAINER***/
 .container {
-  width: 95%;
+  width: 90%;
   display: flex;
   flex-direction: row;
 
@@ -140,12 +164,50 @@ a {
   justify-content: center;
   margin-top: 2rem;
   gap: 1rem;
+  filter: brightness(0) invert(1);
 }
 
 .socials a {
   width: 35px;
 }
 /*-----------FORM---------------------*/
+
+.inputcont {
+  padding: 20px 0 0 0;
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+}
+.inputcont label {
+  position: absolute;
+  bottom: 0;
+  color: gray;
+
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  height: 100%;
+  border-bottom: 1px white solid;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  transition: all 0.4s ease-out;
+  transform: translateX(-100%);
+  border-bottom: 2px #0098ff solid;
+}
+.contentname {
+  position: absolute;
+  top: 50px;
+  left: 5px;
+
+  transition: all 0.4s ease-out;
+}
 .formContainer {
   padding: 3rem;
   text-align: center;
@@ -153,32 +215,47 @@ a {
   color: white;
   position: relative;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 1.5rem;
 }
 form {
   display: flex;
   position: absolute;
-  width: 100%;
+  min-width: 100%;
   align-items: center;
   top: 70%;
   left: 00%;
-  flex-direction: column;
-  gap: 2.5rem;
+  flex-direction: row;
+  gap: 1.5rem;
   transition: all 0.5s ease-out;
 }
 form input,
 form select {
-  padding: 1rem;
-  width: 80%;
+  padding: 1.5rem 0.8rem;
+  width: 100%;
   color: white;
   background: transparent;
   border: 0;
   border-bottom: 1px #fff solid;
   outline: none;
 }
+form select {
+  width: 80%;
+  padding: 1.5rem 0.5rem;
+}
+
+form input:focus + .labelname .contentname,
+form input:valid + .labelname .contentname {
+  transform: translateY(-150%) scale(0.8);
+  color: #0098ff;
+}
+form input:focus + label::after {
+  transform: translateX(0);
+}
+
 form select option {
   background: black;
 }
+
 .btn-box {
   width: 80%;
   margin: 3rem auto;
@@ -197,7 +274,19 @@ form select option {
   cursor: pointer;
   border-radius: 20px;
 }
-
+#form1,
+#form2,
+#form3 {
+  display: flex;
+  position: absolute;
+  min-width: 100%;
+  align-items: center;
+  top: 50%;
+  left: 00%;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.5s ease-out;
+}
 #form2,
 #form3 {
   left: 100%;
