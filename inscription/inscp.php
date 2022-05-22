@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         $objectif = $_POST['objectif'];
         $host = 'localhost';
         $dbUsername = 'root';
-        $dbPassword = 'Stophacking22_';
+        $dbPassword = '';
         $dbName = 'projetweb';
 
         $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName,'3307');

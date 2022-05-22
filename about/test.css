@@ -1,0 +1,47 @@
+#D1 {
+  color: white;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+  border-radius: 0.5em;
+}
+.gallery {
+  display: flex;
+  max-width: 550px;
+
+  position: relative;
+}
+@media screen and (min-width: 600px) {
+  .gallery {
+    padding-top: 400px;
+  }
+}
+.gallery_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.gallery_thumb {
+  padding-top: 1;
+  margin: 5px;
+  margin-top: 120%;
+  display: block;
+}
+.gallery_selector {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.gallery_selector:checked + .gallery_img {
+  opacity: 1;
+}
+.gallery_selector:checked ~ .gallery_thumb > img {
+  box-shadow: 0 0 0 3px #647ae9;
+}
