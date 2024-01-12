@@ -21,10 +21,10 @@ if (isset($_POST['submit'])) {
         $objectif = $_POST['objectif'];
         $host = 'localhost';
         $dbUsername = 'root';
-        $dbPassword = '';
+        $dbPassword = 'Stophacking22_';
         $dbName = 'projetweb';
 
-        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName,'3307');
+        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName,'3306');
         if ($conn->connect_error) {
             die('Could not connect to the database. '. $conn->connect_error);
         }
@@ -33,13 +33,13 @@ if (isset($_POST['submit'])) {
             
             $Insert = "INSERT INTO adherant(name,last_name,number,email,matricule,year,faculty,specialty,motif,objectif) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-          
+          $adr=$_SERVER['DOCUMENT_ROOT'];
               
                 $stmt = $conn->prepare($Insert);
                 $stmt->bind_param("ssssssssss",$name, $lastname, $number, $email, $matricule, $year,$faculty,$specialty,$motif,$objectif);
                 if ($stmt->execute()) {
                     $_SESSION['status']='inscription added succssfully!';
-                    header('Location: inscp1.php');
+                   header('Location: inscppage.php');
                 }
                 else {
                     echo $stmt->error;
@@ -55,5 +55,3 @@ if (isset($_POST['submit'])) {
         die();
     }
 
-
-?>

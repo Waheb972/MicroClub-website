@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&family=Poppins:wght@200&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,8 @@
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: "Kumbh Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 main {
   width: 100vw;
@@ -95,11 +99,12 @@ a {
 }
 
 .explore {
-  margin: 0 1rem;
+  margin: 1.5rem;
   padding: 1rem 1.5rem;
   border-radius: 10px;
   background: #ff40bf;
   color: white;
+  font-weight: 700;
   border: none;
   transition: all 0.4s ease-in-out;
 }
@@ -109,6 +114,7 @@ a {
   transform: scale(1.08);
 }
 .mySwiper {
+  width: 100vw;
   margin: 2rem 0;
 }
 .card {
@@ -176,7 +182,7 @@ a {
 .card img {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
   height: 300px;
   pointer-events: none;
@@ -214,15 +220,55 @@ a {
   color: white;
   line-height: 1.5em;
 }
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 @media (max-width: 991px) {
+  main {
+    height: fit-content;
+  }
+  .mainImage {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mainImage img {
+    width: 100%;
+  }
+
+  .main-container {
+    width: 100%;
+    height: 100%;
+    margin: 1rem auto;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .swiper-wrapper {
+    margin: 0 auto;
+  }
+  .text {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
   .card {
     width: auto;
     max-width: 350px;
     align-items: flex-start;
+    justify-content: space-between;
     margin: 10px;
   }
   .card:hover {
     height: 600px;
+  }
+  .card:hover img {
+    transform: scale(0.95);
   }
   .card .content {
     width: 100%;
@@ -230,29 +276,31 @@ a {
     padding: 40px;
   }
   .card:hover img {
-    top: 70%;
+    top: 57%;
     left: 50%;
     height: 300px;
   }
 }
+.event-text {
+  color: #ff40bf;
+  font-size: larger;
+}
 @media (max-width: 420px) {
   .card .content {
-    padding: 20px;
+    padding: 30px;
   }
 }
 img {
   border-radius: 8%;
 }
 
-/*
 footer {
   margin-top: 3rem;
   width: 100vw;
   height: 25vh;
-  background: black;
 }
 .griding {
-  width: 90%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -260,7 +308,7 @@ footer {
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
-  background: violet;
+  background: linear-gradient(to top, rgb(85, 85, 156), rgb(32, 32, 83));
   margin: auto;
 }
 .gridcomp {
@@ -270,6 +318,4 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: green;
 }
-*/

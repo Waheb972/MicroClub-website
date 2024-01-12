@@ -1,15 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   /* background: url(images/CircuitBoar.svg);*/
-  background-color: rgb(2, 10, 57);
+  background: linear-gradient(to bottom, rgb(85, 85, 156), rgb(32, 32, 83));
   width: 100vw;
-  height: 100%;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Kumbh Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-position: center center;
   color: rgb(255, 255, 255);
+  overflow-x: hidden;
 }
 
 main {
@@ -111,7 +118,7 @@ a {
   line-height: 40px;
   letter-spacing: 0.12rem;
 }
-.first {
+#first {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -197,7 +204,7 @@ svg {
   );
   z-index: -1;
 
-  box-shadow: 0px -1px 223px 0px rgba(41, 63, 184, 0.75);
+  box-shadow: 0px -1px 300px 0px rgba(91, 110, 214, 0.75);
 }
 .img-3 {
   width: 100%;
@@ -262,9 +269,13 @@ svg {
 }
 .para {
   position: absolute;
-  bottom: -10%;
-  left: 10%;
+  bottom: -20%;
+  left: 7%;
+  text-align: left;
   z-index: 2;
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  width: 80%;
   transition: 0.3s all ease-in-out;
 }
 .swiper-slide {
@@ -286,17 +297,118 @@ svg {
 
 .slide {
   margin: 2rem auto;
+
   width: 90vw;
-  height: 50vh;
+
   justify-content: center;
   text-align: center;
 }
 
-/*
-.topover {
-  height: 100%;
-  width: 0;
-  top: 0;
-  left: 0;
+footer {
+  width: 100vw;
+  height: 30vh;
+  margin-bottom: 0;
 }
-*/
+.griding {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  background: linear-gradient(to top, rgb(85, 85, 156), rgb(32, 32, 83));
+  margin: auto;
+}
+.gridcomp {
+  display: flex;
+  height: 100%;
+  width: 33.3%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexi_1,
+.flexi_2,
+.flexi_3 {
+  display: flex;
+  gap: 1.5rem;
+}
+.flexi_1 {
+  grid-column-start: 3;
+  flex-direction: column;
+}
+.flexi_2 {
+  grid-column-start: 4;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+}
+.foot {
+  height: 150px;
+
+  width: 100%;
+
+  color: white;
+  text-align: center;
+}
+.foot svg {
+  filter: brightness(0) invert(1);
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 1088px) {
+  #first {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+  }
+  #D1 {
+    width: 60%;
+
+    margin: 0 auto;
+  }
+  .text_1 {
+    text-align: center;
+    margin-right: 2rem;
+    width: 95%;
+  }
+  .second {
+    flex-direction: column;
+    width: 100%;
+    gap: 6rem;
+    height: fit-content;
+    margin-top: 5rem;
+
+    justify-content: center;
+  }
+  .super {
+    width: 90%;
+    background: white;
+
+    height: 60vh;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  .right {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .maingall {
+    width: 100%;
+    height: 100%;
+
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

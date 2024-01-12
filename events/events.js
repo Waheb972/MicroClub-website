@@ -8,3 +8,12 @@ for (let i = 0; i < Navelem.length; i++) {
     Navelem[i].className += " active";
   });
 }
+
+const scrolling = document.querySelector(".explore");
+
+scrolling.addEventListener("click", (e) => {
+  e.preventDefault();
+  scrolling.scrollIntoView({
+    behavior: "smooth",
+  });
+});

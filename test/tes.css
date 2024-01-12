@@ -1,23 +1,8 @@
-.grille {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr 3fr 3fr;
-  margin-top: 10%;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(28, 49, 91);
-}
-.petit img {
-  grid-column-start: 2;
-  width: 60%;
-  margin-left: 120%;
-  margin-top: 20%;
-  filter: brightness(0) invert(1);
-}
 .flexi_1,
 .flexi_2,
 .flexi_3 {
   display: flex;
-  margin-top: 15%;
+  gap: 1.5rem;
 }
 .flexi_1 {
   grid-column-start: 3;
@@ -27,32 +12,18 @@
   grid-column-start: 4;
   flex-direction: column;
 }
-.flexi_3 {
-  margin-left: 50%;
-}
-.contact,
-.kit {
-  margin-top: 8%;
-}
-.install {
-  margin-top: 10%;
-}
-.facebook {
-  margin-right: 15%;
-}
-.twitter {
-  margin-right: 15%;
+ul {
+  list-style: none;
 }
 .foot {
   height: 150px;
-  left: 0;
-  bottom: 0;
+
   width: 100%;
 
   color: white;
   text-align: center;
 }
-svg {
+.foot svg {
   filter: brightness(0) invert(1);
   width: 32px;
   height: 32px;

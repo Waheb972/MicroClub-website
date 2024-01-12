@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Sacramento&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+    url("images/wallhaven-kwr321.jpg");
+  max-height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgb(4, 21, 28);
+
+  overflow-x: hidden;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+nav {
+  z-index: 2;
+  display: flex;
+  padding: 0.75rem 2rem;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-between;
+}
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-style: italic;
+  list-style: none;
+  color: white;
+}
+.option {
+  margin: 0 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.option:after {
+  content: "";
+  background-color: #fff;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  position: absolute;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.option:hover::after,
+.active::after {
+  width: 100%;
+}
+.logo {
+  filter: brightness(0) invert(1);
+  width: 64px;
+  height: 64px;
+}
+.active {
+  font-weight: bolder;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-container {
+  width: 90%;
+  height: 80%;
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-container {
+  position: relative;
+  text-align: center;
+  left: 38%;
+}
+.title-container h1 {
+  text-align: center;
+  color: white;
+  font-size: 90px;
+  font-family: "Sacramento", cursive;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(201, 35, 135), 0 0 82px rgb(225, 30, 147),
+    0 0 92px rgb(206, 23, 133), 0 0 102px rgb(184, 32, 123),
+    0 0 151px rgb(193, 32, 129);
+}
+@media screen and (max-width: 990px) {
+  .title-container {
+    left: 27%;
+  }
+  .title-container h1 {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 480) {
+  .title-container {
+    background-color: rgb(33, 227, 188);
+    left: 27%;
+  }
+  .title-container h1 {
+    font-size: 50px;
+  }
+}
+.title-container a {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 5%;
+  display: inline-block;
+  color: #fff;
+}
+.item img {
+  width: 200px;
+  height: auto;
+}
+.spon {
+  width: 80%;
+  margin: 0 auto;
+}
+.star {
+  width: 80%;
+  text-align: center;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+.star p {
+  line-height: 2em;
+  font-size: 20px;
+}
+.star h1 {
+  margin-top: 15%;
+  font-size: 65px;
+  padding-bottom: 5%;
+}
+
+.main2 {
+  color: #fff;
+}
+.spon h1 {
+  font-size: 50px;
+  padding-bottom: 5%;
+}
+.item img {
+  border-radius: 50%;
+}
+
+footer {
+  width: 100vw;
+  height: 30vh;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+.griding {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  background: linear-gradient(
+    to top,
+    rgb(85, 85, 156),
+    rgba(32, 32, 83, 0.236)
+  );
+  margin: auto;
+}
+.gridcomp {
+  display: flex;
+  height: 100%;
+  width: 33.3%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexi_1,
+.flexi_2,
+.flexi_3 {
+  display: flex;
+  gap: 1.5rem;
+}
+.flexi_1 {
+  grid-column-start: 3;
+  flex-direction: column;
+}
+.flexi_2 {
+  grid-column-start: 4;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+}
+.foot {
+  height: 150px;
+
+  width: 100%;
+
+  color: white;
+  text-align: center;
+}
+.foot svg {
+  filter: brightness(0) invert(1);
+  width: 32px;
+  height: 32px;
+}

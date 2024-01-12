@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="pepsi.css" />
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card" id="i1">
+            <div class="circle"></div>
+            <div class="content">
+              <h2>Algeria game Challenge</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias quos distinctio beatae obcaecati ipsa dolore
+                consequuntur eum est iure quibusdam earum dolores, assumenda,
+                labore laborum cumque minima iusto cupiditate voluptate.
+              </p>
+            </div>
+            <img src="images/test.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" id="i5">
+            <div class="circle"></div>
+            <div class="content">
+              <h2>Capture The Flag</h2>
+              <p>
+                Un salon autour de la cyber-sécurité. Le but de MCTF est de
+                permettre aux participants de découvrir et maîtriser de
+                nouvelles technologies ainsi que de développer de nouvelles
+                compétences. Dans l’optique d’encourager le développement de la
+                communauté de white hackers,
+              </p>
+            </div>
+            <img src="images/pic2.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" id="i3">
+            <div class="circle"></div>
+            <div class="content">
+              <h2>RedHat</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias quos distinctio beatae obcaecati ipsa dolore
+                consequuntur eum est iure quibusdam earum dolores, assumenda,
+                labore laborum cumque minima iusto cupiditate voluptate.
+              </p>
+            </div>
+            <img src="images/pic3.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" id="i2">
+            <div class="circle"></div>
+            <div class="content">
+              <h2>HACKTOBER</h2>
+              <p>
+                A month long celebration of open source presented by digital
+                ocean, sponsored by Github and hosted by Micro Club.
+              </p>
+            </div>
+            <img src="images/pic4.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" id="i4">
+            <div class="circle"></div>
+            <div class="content">
+              <h2>League of robotics</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias quos distinctio beatae obcaecati ipsa dolore
+                consequuntur eum est iure quibusdam earum dolores, assumenda,
+                labore laborum cumque minima iusto cupiditate voluptate.
+              </p>
+            </div>
+            <img src="images/robot.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <!------------------------------------------------------------------------>
+    <div class="foot">
+      <section class="grille">
+        <div class="petit"><img src="images/logo.svg" /></div>
+        <div class="flexi_1">
+          <div class="faq"><a href="#">FAQs</a></div>
+          <div class="contact"><a href="#">Contact Us</a></div>
+        </div>
+        <div class="flexi_2">
+          <div class="policy"><a href="#">Privacy Policy</a></div>
+          <div class="kit"><a href="#">Press Kit</a></div>
+        </div>
+        <div class="install"><a href="#">Install Guide</a></div>
+        <div class="flexi_3">
+          <div class="facebook">
+            <a href="#"><img src="reseau/icon-facebook.svg" /></a>
+          </div>
+          <div class="twitter">
+            <a href="#"><img src="reseau/icon-instagram.svg" /></a>
+          </div>
+          <div class="insta">
+            <a href="#"><img src="reseau/icon-twitter.svg" /></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
